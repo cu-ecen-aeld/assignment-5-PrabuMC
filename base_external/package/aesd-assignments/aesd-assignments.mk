@@ -6,7 +6,7 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESD_ASSIGNMENTS_VERSION = 'f9a8720a96c371701555520d7de9b33a1e05cfb4'
+AESD_ASSIGNMENTS_VERSION = '7d7638899576f660c29cbd589c317ef4ce46c59f'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -15,7 +15,7 @@ AESD_ASSIGNMENTS_SITE_METHOD = git
 AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
 
 define AESD_ASSIGNMENTS_BUILD_CMDS
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) ARCH=arm64 CROSS_COMPILE=aarch64-none-linux-gnu- -C $(@D)/finder-app all
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) ARCH=arm64 CC=aarch64-none-linux-gnu-gcc -C $(@D)/finder-app all
 endef
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
